@@ -1,0 +1,118 @@
+.notes-section {
+    background-color: #120018;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 65vh; /* половина высоты экрана */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .notes-section h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #7c3aed;
+  }
+  
+  .add-note {
+    margin-bottom: 10px;
+  }
+  
+
+  .cancelled-lesson {
+    opacity: 0.7;
+    position: relative;
+    padding: 5px;
+    margin: 3px 0;
+    background-color: #ffebee;
+    border-left: 3px solid #f44336;
+}
+
+.cancelled-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    font-size: 0.8em;
+}
+
+.cancelled-label {
+    color: #f44336;
+    font-weight: bold;
+}
+
+.cancelled-reason {
+    color: #666;
+    font-style: italic;
+}
+
+.cancelled-day {
+    background-color: #ffebee !important;
+}
+
+  .add-note textarea {
+    width: 100%;
+    min-height: 80px;
+    border-radius: 10px;
+    border: 1px solid #ebe7e7;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #1C1C1C;
+    color: #fff;
+  }
+  
+  .add-note button {
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .notes-list {
+    flex-grow: 1;
+    overflow-y: auto; /* скроллбар */
+    margin-top: 10px;
+  }
+  
+  .note-item {
+    background-color: #1C1C1C;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .note-item p {
+    font-size: 16px;
+  }
+  
+  .note-item button {
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin-right: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .note-item button:last-child {
+    background-color: #ef4444;
+  }
+  
+  /* Кнопка показать/скрыть */
+  .toggle-button {
+    background: none;
+    border: none;
+    color: #7c3aed;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: center;
+  }
+  

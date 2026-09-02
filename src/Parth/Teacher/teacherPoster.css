@@ -1,0 +1,47 @@
+.teacher-backdrop {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .backdrop-title {
+    position: absolute;
+    font-size: 10vw;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.05);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    z-index: 1;
+  }
+  
+  .teacher-image {
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    z-index: 2;
+    box-shadow: 0 0 30px rgba(0, 97, 191, 0.8), 0 0 50px rgba(210, 0, 163, 0.6);
+    transition: transform 0.5s ease;
+  }
+  
+  .teacher-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .teacher-info {
+    background-color: #0a0a0a;
+    color: #cccccc;
+    padding: 50px;
+    font-size: 1.3em;
+    text-align: center;
+  }
+  
+  .teacher-info strong {
+    color: #d200a3;
+    font-size: 2em;
+  }
+  
