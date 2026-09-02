@@ -14,7 +14,7 @@ DB_HOST=localhost
 DB_PORT=5432
 DB_USER=postgres
 DB_PASSWORD=ваш_пароль
-DB_NAME=kindness_db(подумать)
+DB_NAME=eurodance
 9. Выполнить в терминале:
 npm start
 10. Открыть приложение по адресу: http://localhost:3000
