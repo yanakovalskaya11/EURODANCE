@@ -1,0 +1,69 @@
+.payment-success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 94.5vh;
+  background: #f2f4f8;
+  padding: 20px;
+}
+
+.payment-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  animation: slideIn 0.5s ease-out;
+}
+
+.success-icon {
+  font-size: 60px;
+  color: #27ae60;
+  margin-bottom: 20px;
+}
+
+.success-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.success-message_pay {
+  font-size: 16px;
+  color: #555;
+}
+
+.success-subtext {
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.success-button {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.success-button:hover {
+  background: #1e8e50;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* делает иконку белой */
+  cursor: pointer;
+}
+
+.main-content {
+  padding-top: 15vh;
+  background-color: rgba(18, 0, 24);
+    flex: 1;  
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* index.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Новый фон для всего приложения */
+  background: linear-gradient(135deg, #120018, #0a0010, #1a0025);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  min-height: 100vh;
+  color: #fff;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* Основные стили уведомлений */
+.Toastify__toast-container {
+  width: auto;
+  max-width: 420px;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.Toastify__toast {
+  background: rgba(30, 5, 60, 0.95) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 4px 30px rgba(139, 92, 246, 0.25);
+  color: #f3f4f6;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Иконка уведомления */
+.Toastify__toast-icon {
+  margin-right: 14px;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
+}
+
+/* Стили для разных типов уведомлений */
+.Toastify__toast--success {
+  border-left: 4px solid #10b981;
+  background: linear-gradient(
+    90deg, 
+    rgba(16, 185, 129, 0.15), 
+    rgba(30, 5, 60, 0.95)
+  ) !important;
+}
+
+.Toastify__toast--error {
+  border-left: 4px solid #ef4444;
+  background: linear-gradient(
+    90deg, 
+    rgba(239, 68, 68, 0.15), 
+    rgba(30, 5, 60, 0.95)
+  ) !important;
+}
+
+.Toastify__toast--info {
+  border-left: 4px solid #3b82f6;
+  background: linear-gradient(
+    90deg, 
+    rgba(59, 130, 246, 0.15), 
+    rgba(30, 5, 60, 0.95)
+  ) !important;
+}
+
+.Toastify__toast--warning {
+  border-left: 4px solid #f59e0b;
+  background: linear-gradient(
+    90deg, 
+    rgba(245, 158, 11, 0.15), 
+    rgba(30, 5, 60, 0.95)
+  ) !important;
+}
+
+/* Прогресс-бар */
+.Toastify__progress-bar {
+  height: 3px;
+  background: linear-gradient(
+    90deg, 
+    #8b5cf6, 
+    #7c3aed
+  );
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+/* Кнопка закрытия */
+.Toastify__close-button {
+  color: #a78bfa;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  align-self: center;
+  margin-left: 10px;
+}
+
+.Toastify__close-button:hover {
+  color: #e9d5ff;
+  opacity: 1;
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Анимации */
+@keyframes slideIn {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.Toastify__slide-enter {
+  animation: slideIn 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.Toastify__slide-exit {
+  animation: fadeOut 0.3s ease-out;
+}
+
+/* Контент уведомления */
+.Toastify__toast-body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.Toastify__toast-body > div {
+  flex: 1;
+  line-height: 1.5;
+}
+
+/* Заголовок уведомления */
+.toast-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+  color: #e9d5ff;
+}
+
+/* Текст уведомления */
+.toast-message {
+  font-size: 0.9rem;
+  color: #d1d5db;
+  opacity: 0.9;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+  .Toastify__toast-container {
+    width: 100vw;
+    padding: 0 15px;
+    left: 0;
+    margin: 0;
+  }
+  
+  .Toastify__toast {
+    margin: 0.5rem auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Эффект свечения при наведении */
+.Toastify__toast:hover {
+  box-shadow: 0 6px 40px rgba(139, 92, 246, 0.35);
+  transform: translateY(-2px);
+}
