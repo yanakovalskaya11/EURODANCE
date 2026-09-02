@@ -1,0 +1,183 @@
+/* Основные стили формы */
+.add-advice-form {
+  background-color: rgba(18, 0, 24, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  margin: 30px auto;
+  padding: 25px;
+  max-width: 1000px;
+  box-shadow: 0 4px 30px rgba(210, 0, 163, 0.25);
+  border: 1px solid rgba(210, 0, 163, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  width: 93%;
+}
+
+
+.add-advice-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 40px rgba(210, 0, 163, 0.4);
+}
+
+.form-title {
+  margin: 0 0 20px 0;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #d200a3, #0061bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(210, 0, 163, 0.3);
+}
+
+/* Стили формы */
+.form-group_h {
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.form_advice{
+  width: 90%;
+}
+.form-input_h {
+  width: 93%;
+  /* padding: 12px 15px; */
+  border-radius: 8px;
+  border: 1px solid rgba(210, 0, 163, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  /* margin: auto; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #d200a3;
+  box-shadow: 0 0 10px rgba(210, 0, 163, 0.3);
+}
+
+/* Стили редактора */
+.editor-container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  margin: 20px 0;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.editor-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+  background: rgba(210, 0, 163, 0.1);
+  border-bottom: 1px solid rgba(210, 0, 163, 0.2);
+}
+
+.menu-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(210, 0, 163, 0.3);
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  color: #333;
+}
+
+.menu-btn:hover {
+  background: rgba(210, 0, 163, 0.1);
+}
+
+.menu-btn.active {
+  background: linear-gradient(90deg, #d200a3, #0061bf);
+  color: white;
+  border-color: transparent;
+}
+
+.editor-content {
+  padding: 15px;
+  min-height: 200px;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.editor-container p{
+    color: #000000;
+}
+.form-title {
+  color: #333; /* или любой другой цвет */
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+/* Кнопка отправки */
+.submit-btn {
+  background: linear-gradient(90deg, #d200a3, #0061bf);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(210, 0, 163, 0.4);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .add-advice-form {
+    padding: 20px;
+    margin: 20px auto;
+  }
+  
+  .form-title {
+    font-size: 1.8rem;
+  }
+  
+  .editor-content {
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-advice-form {
+    padding: 15px;
+  }
+  
+  .form-title {
+    font-size: 1.5rem;
+  }
+  
+  .menu-btn {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

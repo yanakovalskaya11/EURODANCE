@@ -1,0 +1,490 @@
+/* Основные переменные цветов */
+:root {
+  --bg-dark: #120018;
+  --bg-darker: #0d0012;
+  --bg-card: #1a0024;
+  --primary-color: #d200a3;
+  --primary-hover: #b0008a;
+  --secondary-color: #0061bf;
+  --secondary-hover: #004a9a;
+  --text-light: #ffffff;
+  --text-muted: #b8a0c7;
+  --border-color: #2d003d;
+  --border-accent: rgba(210, 0, 163, 0.3);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+/* Базовые стили */
+.questions-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.25rem;
+  color: var(--text-light);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-dark);
+}
+
+/* Заголовок */
+.questions-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(210, 0, 163, 0.3);
+}
+
+/* Панель управления */
+.controls-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.search-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-color: var(--bg-card);
+  color: var(--text-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(210, 0, 163, 0.2);
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+
+.search-icon {
+  position: absolute;
+  left: -0.1rem;
+  top: 40%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.direction-select {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  background-color: var(--bg-card);
+  color: var(--text-light);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  min-width: 200px;
+}
+
+.direction-select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(210, 0, 163, 0.2);
+}
+
+/* Карточки вопросов */
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.question-item {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid transparent;
+  border: 1px solid var(--border-color);
+}
+
+.question-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 30px rgba(210, 0, 163, 0.3);
+  border-color: var(--border-accent);
+}
+
+.question-item.has-answer {
+  border-left-color: var(--primary-color);
+}
+
+.question-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.author {
+  font-weight: 600;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.author.anonymous {
+  color: var(--text-muted);
+}
+
+.author.anonymous::before {
+  content: '👤';
+  opacity: 0.7;
+}
+
+.date {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.direction-tag {
+  background-color: rgba(110, 0, 255, 0.1);
+  color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.question-text {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  color: var(--text-light);
+  white-space: pre-line;
+}
+
+/* Блок ответа */
+.answer-block {
+  background-color: var(--bg-darker);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  border-top: 1px solid var(--border-accent);
+  position: relative;
+}
+
+.answer-block::before {
+  content: 'Ответ';
+  position: absolute;
+  top: -0.625rem;
+  left: 1.25rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+}
+
+.teacher-info_2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.teacher-avatar-wrapper {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+}
+
+.teacher-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--bg-card);
+  box-shadow: var(--shadow-sm);
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.teacher-details_2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.teacher-name {
+  font-weight: 600;
+  color: var(--text-light);
+
+}
+
+.no-text-decoration {
+  text-decoration: none;
+}
+
+/* Или для всех ссылок */
+a {
+  text-decoration: none;
+}
+
+/* Для активных ссылок NavLink */
+.active-link {
+  text-decoration: none;
+}
+
+.answer-date {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-left: 5vh;
+}
+
+.answer-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  white-space: pre-line;
+}
+
+/* Кнопка добавления */
+.add-question-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(210, 0, 163, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: all 0.2s ease;
+}
+
+.add-question-btn:hover {
+  background: linear-gradient(135deg, var(--primary-hover), var(--secondary-hover));
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 6px 20px rgba(210, 0, 163, 0.4);
+}
+
+/* Форма вопроса */
+.question-form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(18, 0, 24, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.form-content {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-accent);
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-content h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.question-textarea {
+  width: 95%;
+  min-height: 10rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  resize: vertical;
+  transition: all 0.2s ease;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.question-textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(210, 0, 163, 0.2);
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-select {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(210, 0, 163, 0.2);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+.checkbox-label input {
+  width: 1.125rem;
+  height: 1.125rem;
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.submit-btn {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+.teacher-name_quest{
+    margin-left: 5vh;
+}
+.submit-btn:hover {
+  background: linear-gradient(90deg, var(--primary-hover), var(--secondary-hover));
+  transform: translateY(-1px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .questions-container {
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+  }
+  
+  .controls-row {
+    flex-direction: column;
+  }
+  
+  .search-wrapper,
+  .direction-select {
+    width: 100%;
+  }
+  
+  .add-question-btn {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  .form-content {
+    padding: 1.5rem;
+  }
+  
+  .question-item {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .questions-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .question-text {
+    font-size: 1rem;
+  }
+  
+  .form-content {
+    width: 95%;
+    padding: 1.25rem;
+  }
+}

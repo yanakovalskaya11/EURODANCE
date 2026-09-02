@@ -1,0 +1,491 @@
+.MyTickets {
+    padding: 2vh 2vw;
+  }
+  
+  /* Заголовок */
+  .MyTickets h3 {
+    font-size: 1.8em;
+    color: #d200a3;
+    text-shadow: 0 0 8px #d200a3;
+    margin-bottom: 2vh;
+    text-align: center;
+  }
+  
+  /* Вкладки */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vh;
+    gap: 1vw;
+  }
+  
+  .tab {
+    padding: 0.7em 1.5em;
+    background-color: transparent;
+    border: 1px solid #d200a3;
+    color: #d200a3;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .tab:hover,
+  .tab.active {
+    background-color: #d200a3;
+    color: white;
+    box-shadow: 0 0 10px #d200a3;
+  }
+  
+  /* Уведомление */
+  .reminder-message {
+    background-color: #2d0032;
+    border-left: 4px solid #ff00aa;
+    padding: 1vh 1vw;
+    margin: 2vh auto;
+    width: fit-content;
+    max-width: 90%;
+    color: #ffbbee;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 0, 170, 0.4);
+    text-align: center;
+  }
+  
+  /* Карточки абонементов */
+  .tickets_my {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: center;
+  }
+  
+  .ticket_my {
+    background-color: #1c001e;
+    border: 1px solid #d200a3;
+    box-shadow: 0 0 10px rgba(210, 0, 163, 0.3);
+    padding: 2vh 2vw;
+    border-radius: 12px;
+    max-width: 280px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .ticket_my:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 16px rgba(210, 0, 163, 0.6);
+  }
+  
+  .ticket_my h2 {
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 1vh;
+    text-shadow: 0 0 4px #d200a3;
+  }
+  
+  .ticket_my p {
+    color: #cccccc;
+    margin-top: 1vh;
+    font-size: 1em;
+  }
+  
+  .ticket_my img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1vh;
+    border-radius: 8px;
+  }
+  
+  /* Адаптив */
+  @media (max-width: 768px) {
+    .tickets_my {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .ticket_my {
+      max-width: 90%;
+    }
+  
+    .tab {
+      font-size: 0.9em;
+      padding: 0.6em 1em;
+    }
+  
+    .MyTickets h3 {
+      font-size: 1.5em;
+    }
+  }
+.MyLessons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* ✅ добавлено */
+  gap: 2vh;
+  justify-content: center; /* ✅ выравнивание по центру */
+  max-width: 1200px;
+}
+
+.MyLessons li {
+  background-color: #1c001e;
+  margin: 1vh;
+  padding: 2vh 2vw;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(210, 0, 163, 0.2);
+  border: 1px solid #d200a3;
+  transition: transform 0.3s ease;
+  flex: 1 1 300px; /* ✅ позволяет адаптироваться по ширине */
+  max-width: 340px;
+  box-sizing: border-box;
+}
+
+  
+  .MyLessons li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 14px rgba(210, 0, 163, 0.4);
+  }
+  
+  .MyLessons li h2 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #ffffff;
+    text-shadow: 0 0 4px #d200a3;
+  }
+  
+  .MyLessons li p {
+    margin-top: 1vh;
+    color: #ccc;
+    font-size: 1em;
+  }
+  
+  /* Заголовок */
+  .MyLessons h3 {
+    font-size: 1.8em;
+    color: #d200a3;
+    margin-bottom: 2vh;
+    text-shadow: 0 0 8px #d200a3;
+    text-align: center;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .MyLessons li {
+      padding: 2vh 4vw;
+    }
+  
+    .MyLessons h3 {
+      font-size: 1.5em;
+    }
+  
+    .MyLessons li h2 {
+      font-size: 1.2em;
+    }
+  
+    .MyLessons li p {
+      font-size: 0.95em;
+    }
+  }
+  .profile-block {
+    background-color: #120018;
+    padding: 5vh 3vw;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(210, 0, 163, 0.3);
+    border: 2px solid #d200a3;
+    width: 80%;
+    max-width: 600px;
+    margin: 5vh auto;
+    text-align: center;
+  }
+  
+  .profile-photo {
+    width: 12vh;
+    height: 12vh;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #d200a3;
+    box-shadow: 0 0 12px rgba(210, 0, 163, 0.5);
+    margin-bottom: 2vh;
+  }
+  
+  .profile-info p,
+  .edit-form label {
+    margin: 1.5vh 0 0.5vh;
+    font-size: 1.1em;
+    color: #ffffff;
+    text-shadow: 0 0 3px #d200a3;
+  }
+  
+  .profile-info p strong {
+    color: #d200a3;
+  }
+  
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vh;
+    margin-top: 2vh;
+  }
+  
+  .edit-form input,
+  .edit-form textarea {
+    width: 90% !important;
+    padding: 1vh 1vw;
+    border-radius: 10px;
+    border: 1px solid #d200a3;
+    background-color: #1c001e;
+    color: #fff;
+    font-size: 1em;
+    box-shadow: 0 0 8px rgba(210, 0, 163, 0.2);
+  }
+  
+  .edit-form input[type="file"] {
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    color: #ccc;
+  }
+  
+  .profile-actions {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+    flex-wrap: wrap;
+  }
+  
+  .profile-actions button {
+    background-color: #d200a3;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 1vh 3vh;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(210, 0, 163, 0.4);
+    text-transform: uppercase;
+  }
+  
+  .profile-actions button:hover {
+    background-color: #ffffff;
+    color: #120018;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+  .survey-notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        background-color: #1c0324;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 500px;
+    width: 90%;
+  }
+  
+  .notification-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #260132;
+  }
+  
+  .notification-content button {
+    padding: 8px 12px;
+     background-color: #d200a3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .notification-content button:hover {
+     background-color: white;
+     color: black;
+  }
+  
+  .close-notification {
+    align-self: flex-end;
+    background-color: #d200a3;
+    transition: all 0.3s ease;
+  }
+  
+  .close-notification:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .survey-notification ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .survey-notification li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .star-rating {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.star-rating .star {
+    cursor: pointer;
+    color: #ccc;
+    margin-right: 5px;
+}
+
+.star-rating .star.filled {
+    color: gold;
+}
+
+.star-rating .star.disabled {
+    cursor: default;
+}
+
+.submit-rating {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #d200a3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-rating:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.rating-section {
+    margin-top: 15px;
+    padding: 10px;
+    background-color:#260132;
+    border-radius: 5px;
+}
+.expired {
+  display: flex;
+  flex-wrap: wrap; /* перенос карточек */
+  gap: 1rem;
+  justify-content: center; /* выравнивание по центру */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Карточка занятия */
+.expired li {
+  background-color: #1e002d;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  width: calc(33.333% - 1rem); /* 3 карточки в ряд на больших экранах */
+  min-width: 240px; /* минимальная ширина карточки */
+  box-sizing: border-box;
+  list-style: none;
+  flex-grow: 1;
+}
+
+.expired ul {
+  display: contents; /* убираем лишнюю обёртку */
+}
+
+.expired h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.expired p {
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+}
+
+.submit-rating {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submit-rating:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* Адаптивность для телефонов */
+@media (max-width: 1024px) {
+  .expired li {
+    width: calc(50% - 1rem); /* 2 карточки в ряд */
+  }
+}
+
+@media (max-width: 600px) {
+  .expired li {
+    width: 100%; /* 1 карточка в ряд */
+  }
+}
+@media (max-width: 768px) {
+  .MyLessons li {
+    flex: 1 1 90%;
+    max-width: 90%;
+  }
+}
+
+.achievements-section {
+  background: rgba(18,0,24,0.8);
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 16px;
+  border: 2px solid #0061bf;
+  max-width: 1200px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #d200a3;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(210,0,163,0.5);
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+}
+.toggle-expand{
+  background-color: #d200a3;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 1vh 3vh;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(210, 0, 163, 0.4);
+    text-transform: uppercase;
+}
+
+.new-answers-notification {
+  background-color: #ffe08a;
+  color: #000;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-align: center;
+}

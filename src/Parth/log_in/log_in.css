@@ -1,0 +1,278 @@
+.container {
+  background-color: #000000;
+  min-height: 100vh;
+  /* padding-top: 10vh; */
+  font-family: 'Bebas Neue', sans-serif;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+.login_input{
+  width: 95%;
+}
+.form-container {
+  background-color: #120018;
+  border: 3px solid #0061bf;
+  border-radius: 20px;
+  padding: 4vh 4vh 3vh;
+  box-shadow: 0 0 15px rgba(0, 97, 191, 0.6);
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5vh;
+}
+
+.form h1 {
+  text-align: center;
+  font-size: 3em;
+  color: #d200a3;
+  margin-bottom: 2vh;
+  letter-spacing: 2px;
+}
+
+input {
+  width: 90%;
+  padding: 1vh;
+  margin-bottom: 2vh;
+  font-size: 1.1em;
+  border: 2px solid #0061bf;
+  border-radius: 10px;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+input:focus {
+  outline: none;
+  border-color: #d200a3;
+  box-shadow: 0 0 8px #d200a3;
+}
+
+.container button {
+  width: 100%;
+  padding: 1vh;
+  font-size: 1.2em;
+  background-color: #d200a3;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.container button:hover {
+  background-color: #0061bf;
+  transform: scale(1.05);
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #d200a3;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 1vh;
+  transition: color 0.3s ease;
+  font-family: sans-serif;
+}
+
+.link-button:hover {
+  color: #0061bf;
+  text-decoration: underline;
+}
+
+p {
+  font-size: 1em;
+  text-align: center;
+  color: #cccccc;
+  font-family: sans-serif;
+  margin-top: 1vh;
+}
+
+
+.show {
+  display: block;
+}
+
+/* Адаптив */
+@media (max-width: 480px) {
+  .form-container {
+    width: 90%;
+  }
+}
+
+
+.registration-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #ffffff;
+}
+
+.registration-container h1 {
+  text-align: center;
+  font-size: 3em;
+  color: #d200a3;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.registration-container form {
+  background-color: #120018;
+  border: 3px solid #0061bf;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 97, 191, 0.6);
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+}
+
+.reg {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  border: 2px solid #0061bf;
+  border-radius: 10px;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+.reg:focus {
+  outline: none;
+  border-color: #d200a3;
+  box-shadow: 0 0 8px #d200a3;
+}
+
+.reg-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2em;
+  background-color: #d200a3;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.reg-button:hover {
+  background-color: #0061bf;
+  transform: scale(1.05);
+}
+
+.reg-button:disabled {
+  background-color: #555555;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error-message {
+  color: #ff4444;
+  background-color: #1c1c1c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.success-message {
+  color: #00C851;
+  background-color: #1c1c1c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/* ... (остальные стили остаются без изменений) ... */
+
+.verification-code-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.verification-code-container h3 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.verification-code-container p {
+  color: #cccccc;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  font-size: 0.9em;
+}
+
+.code-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px; /* Добавляем промежуток между инпутами */
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.code-input {
+  flex: 1;
+  min-width: 0; /* Важно для правильного масштабирования */
+  max-width: 45px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.5em;
+  border: 2px solid #0061bf;
+  border-radius: 5px;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.code-input:focus {
+  border-color: #d200a3;
+  outline: none;
+  box-shadow: 0 0 8px rgba(210, 0, 163, 0.6);
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 480px) {
+  .code-input {
+    max-width: 35px;
+    height: 45px;
+    font-size: 1.2em;
+  }
+  
+  .code-inputs {
+    gap: 5px;
+  }
+   .registration-container form {
+    width: 90%;
+    padding: 20px;
+  }
+  .registration-container h1 {
+    font-size: 2.5em;
+  }
+}
+
+

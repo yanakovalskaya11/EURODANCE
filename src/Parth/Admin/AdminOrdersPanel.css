@@ -1,0 +1,25 @@
+.admin-orders-panel {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.admin-orders-panel h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-orders-panel table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-orders-panel th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.admin-orders-panel img {
+  border-radius: 8px;
+}

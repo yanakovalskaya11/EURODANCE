@@ -1,0 +1,239 @@
+/* Основные стили ленты советов */
+.advice-feed {
+  max-width: 800px;
+  margin: 100px auto 50px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.menu-icon {
+  color: red; /* Яркий цвет для теста */
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000; /* На самом верху */
+  position: relative;
+}
+.comments{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+
+}
+/* Стили поста с советом */
+.advice-post {
+  background-color: rgba(18, 0, 24, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 30px rgba(210, 0, 163, 0.25);
+  border: 1px solid rgba(210, 0, 163, 0.15);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.advice-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 40px rgba(210, 0, 163, 0.4);
+}
+
+/* Шапка поста */
+.post-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(210, 0, 163, 0.2);
+}
+
+.teacher-info {
+  display: flex;
+  align-items: center;
+}
+
+.teacher-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #d200a3;
+  box-shadow: 0 0 20px rgba(210, 0, 163, 0.5);
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.teacher-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(210, 0, 163, 0.8);
+}
+
+.teacher-name-container {
+  flex: 1;
+}
+
+.teacher-name {
+  margin: 0;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #d200a3, #0061bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(210, 0, 163, 0.3);
+}
+
+.teacher-directions {
+  margin-top: 5px;
+}
+
+.direction-tag {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #b8b8b8;
+  margin-right: 5px;
+  padding: 3px 8px;
+  border-radius: 15px;
+  background: rgba(210, 0, 163, 0.1);
+  border: 1px solid rgba(210, 0, 163, 0.3);
+  transition: all 0.3s ease;
+}
+
+.direction-tag:hover {
+  background: rgba(210, 0, 163, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Содержимое поста */
+.post-content {
+  padding: 20px;
+}
+
+.advice-text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to bottom, #d200a3, #0061bf);
+  border-radius: 2px;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.advice-post {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .advice-feed {
+    margin-top: 80px;
+    padding: 0 15px;
+  }
+  
+  .teacher-avatar {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .teacher-name {
+    font-size: 1.5rem;
+  }
+  
+  .advice-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-header,
+  .post-content {
+    padding: 15px;
+  }
+  
+  .teacher-name {
+    font-size: 1.3rem;
+  }
+  
+  .direction-tag {
+    font-size: 0.8rem;
+    padding: 2px 6px;
+  }
+}
+
+/* Обновите стили .advice-text и добавьте новые */
+.advice-text {
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  position: relative;
+  padding-left: 20px;
+  max-height: 30vh;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.advice-text.expanded {
+  max-height: 1000px; /* Достаточно большое значение для полного раскрытия */
+}
+
+.advice-text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to bottom, #d200a3, #0061bf);
+  border-radius: 2px;
+}
+
+.read-more-container {
+  text-align: center;
+  padding: 10px 20px 20px;
+}
+
+.read-more-btn {
+  background: rgba(210, 0, 163, 0.2);
+  color: #d200a3;
+  border: 1px solid rgba(210, 0, 163, 0.5);
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.read-more-btn:hover {
+  background: rgba(210, 0, 163, 0.4);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(210, 0, 163, 0.3);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .advice-text {
+    font-size: 1rem;
+    max-height: 25vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .advice-text {
+    max-height: 20vh;
+  }
+  
+  .read-more-btn {
+    padding: 6px 15px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,8 @@
+.surveys input{
+    width: 90%;
+}
+.surveys{
+width: 100%;
+display: flex;
+justify-content: center;
+}

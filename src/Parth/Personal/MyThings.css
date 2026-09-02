@@ -1,0 +1,163 @@
+/* MyThings.css */
+.my-things {
+  padding: 2vh 2vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.my-things h3.nap {
+  font-size: 1.8em;
+  color: #d200a3;
+  text-shadow: 0 0 8px #d200a3;
+  margin-bottom: 2vh;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+  margin-bottom: 2vh;
+  flex-wrap: wrap;
+}
+
+.tabs button {
+  padding: 0.7em 1.5em;
+  background-color: transparent;
+  border: 1px solid #d200a3;
+  color: #d200a3;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin: 0.5vh 0;
+}
+
+.tabs button:hover,
+.tabs button.active {
+  background-color: #d200a3;
+  color: white;
+  box-shadow: 0 0 10px #d200a3;
+}
+
+.things-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: center;
+  padding: 2vh 0;
+}
+
+.thing-card {
+  background-color: #1c001e;
+  border: 1px solid #d200a3;
+  box-shadow: 0 0 10px rgba(210, 0, 163, 0.3);
+  padding: 2vh 2vw;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.thing-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 16px rgba(210, 0, 163, 0.6);
+}
+
+.thing-card h4 {
+  color: white;
+  font-size: 1.2em;
+  margin: 0 0 1vh;
+  text-shadow: 0 0 4px #d200a3;
+}
+
+.thing-card img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin: 1vh auto;
+  display: block;
+  border: 2px solid #d200a3;
+}
+
+.thing-card p {
+  color: #cccccc;
+  margin: 0.5vh 0;
+  font-size: 0.9em;
+}
+
+.thing-card .status {
+  color: #ffbbee;
+  font-weight: bold;
+  margin-top: 1vh;
+  display: block;
+  text-shadow: 0 0 4px #d200a3;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .thing-card {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-things h3.nap {
+    font-size: 1.5em;
+  }
+
+  .tabs button {
+    padding: 0.6em 1em;
+    font-size: 0.9em;
+  }
+
+  .thing-card {
+    max-width: 100%;
+    padding: 2vh 4vw;
+  }
+
+  .thing-card h4 {
+    font-size: 1.1em;
+  }
+
+  .thing-card p {
+    font-size: 0.85em;
+  }
+
+  .thing-card img {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-things {
+    padding: 2vh 3vw;
+  }
+
+  .tabs {
+    gap: 2vw;
+  }
+
+  .thing-card {
+    padding: 2vh 3vw;
+  }
+
+  .thing-card img {
+    max-width: 120px;
+  }
+}
+
+/* Сообщение об отсутствии вещей */
+.things-list > p {
+  color: #ffbbee;
+  text-align: center;
+  width: 100%;
+  padding: 2vh 0;
+}
+
+.things-list > p strong {
+  color: #d200a3;
+  text-shadow: 0 0 4px #d200a3;
+}

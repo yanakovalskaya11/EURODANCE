@@ -1,0 +1,433 @@
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 8px;
+}
+
+
+/* TicketStyles.css */
+.ticket-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #0a0012;
+    color: #ffffff;
+    min-height: calc(100vh - 120px);
+}
+
+.ticket-card {
+    display: flex;
+    background-color: #120018;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #d200a34d;
+    overflow: hidden;
+    border: 2px solid #d200a3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ticket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px #d200a366;
+}
+
+.ticket-image {
+    flex: 1;
+    min-width: 650px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ticket-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.ticket-image:hover img {
+    transform: scale(1.05);
+}
+
+.ticket-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(210, 0, 163, 0.2) 0%, rgba(0, 97, 191, 0.2) 100%);
+    z-index: 1;
+}
+
+.ticket-info {
+    flex: 2;
+    padding: 2rem;
+    position: relative;
+}
+
+.ticket-info h2 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #d200a3, 0 0 20px #0061bf;
+    position: relative;
+    display: inline-block;
+}
+
+.ticket-info h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #d200a3 0%, #0061bf 100%);
+}
+
+.ticket-details {
+    margin-bottom: 2rem;
+}
+
+.detail-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    padding: 0.8rem;
+    background-color: rgba(18, 0, 24, 0.7);
+    border-radius: 8px;
+    border-left: 3px solid #d200a3;
+    transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+    background-color: rgba(210, 0, 163, 0.1);
+    border-left: 3px solid #0061bf;
+    transform: translateX(5px);
+}
+
+.detail-item.full-width {
+    display: block;
+    background-color: transparent;
+    border-left: none;
+    padding: 0;
+}
+
+.detail-item.full-width:hover {
+    background-color: transparent;
+    transform: none;
+}
+
+.detail-label {
+    font-weight: bold;
+    min-width: 150px;
+    color: #d200a3;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px #d200a3;
+}
+
+.detail-value {
+    color: #ffffff;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.buy-button {
+    background: linear-gradient(135deg, #d200a3 0%, #0061bf 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(210, 0, 163, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.buy-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(210, 0, 163, 0.8);
+    letter-spacing: 3px;
+}
+
+.buy-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.buy-button:hover::before {
+    left: 100%;
+}
+
+.purchase-form {
+    background-color: rgba(18, 0, 24, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    border: 1px solid #0061bf;
+    box-shadow: 0 0 15px rgba(0, 97, 191, 0.3);
+}
+
+.purchase-form h3 {
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 1.8rem;
+    text-shadow: 0 0 5px #0061bf;
+    border-bottom: 2px solid #d200a3;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: #d200a3;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.form-group input {
+    width: 95%;
+    padding: 12px 15px;
+    border: 2px solid #0061bf;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #d200a3;
+    box-shadow: 0 0 10px #d200a34d;
+}
+
+.confirm-button {
+    background: linear-gradient(135deg, #0061bf 0%, #d200a3 100%);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(0, 97, 191, 0.5);
+}
+
+.confirm-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 97, 191, 0.8);
+    letter-spacing: 2px;
+}
+
+/* .success-message {
+    color: #00ff88;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00ff88;
+    font-size: 1.2rem;
+    text-align: center;
+    animation: pulse 1.5s infinite;
+} */
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .ticket-card {
+        flex-direction: column;
+    }
+    
+    .ticket-image {
+        min-width: 100%;
+        height: 250px;
+    }
+    
+    .ticket-info {
+        padding: 1.5rem;
+    }
+    
+    .detail-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .detail-label {
+        margin-bottom: 0.5rem;
+    }
+    
+    .buy-button, .confirm-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Стили для модального окна оплаты */
+.payment-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.payment-modal {
+    background-color: #120018;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 30px rgba(210, 0, 163, 0.5);
+    border: 2px solid #d200a3;
+    animation: modalAppear 0.3s ease;
+}
+
+@keyframes modalAppear {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.payment-modal h3 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-shadow: 0 0 5px #d200a3;
+}
+
+.payment-amount {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.payment-form {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.payment-form input {
+    width: 100%;
+    padding: 0.35rem;
+    border: 2px solid #0061bf;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.payment-form input:focus {
+    outline: none;
+    border-color: #d200a3;
+    box-shadow: 0 0 10px rgba(210, 0, 163, 0.5);
+}
+
+.payment-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.pay-button, .cancel-button {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pay-button {
+    background: linear-gradient(135deg, #00aa00 0%, #006600 100%);
+    color: white;
+}
+
+.cancel-button {
+    background: linear-gradient(135deg, #666666 0%, #333333 100%);
+    color: white;
+}
+
+.pay-button:hover, .cancel-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(210, 0, 163, 0.3);
+}
+
+.payment-security {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.payment-icons span {
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.visa-icon {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgMzAwIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzFhMjE3OSIvPjxwYXRoIGQ9Ik0yMDMuOCAxOTQuNWgzNi4zbDguOC00OS4xaC0zNi4zeiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0zNzQuOCAxNDUuNGgtMTYuMWMtNiAwLTcuOCAzLjEtOS4xIDcuNWwtMTUuOCA0MS42aDM2LjNsMi45LTE2LjJoMTMuOWwuNS0yLjljLjEtLjYtLjEtMS4xLS43LTEuNHoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMzE5LjMgMTQ1LjRoLTI5LjFsLTcuOCA0OS4xaDI5LjF6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTI2Ni4xIDE0NS40aC0zNi4zbC0yMi4xIDQ5LjFoMzYuM2w2LjEtMTYuMmgzMS4zbDYuMS0xNi4yLTMxLjMtMTYuN3ptLTE1LjkgMzEuNGw0LjEtMTEuMSA0LjEgMTEuMWgtOC4yeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==');
+}
+
+.mastercard-icon {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgMzAwIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzAwMCIgcng9IjE1Ii8+PHBhdGggZD0iTTI1NiAxNTBjMC00MS40LTMzLjYtNzUtNzUtNzVzLTc1IDMzLjYtNzUgNzUgMzMuNiA3NSA3NSA3NSA3NS0zMy42IDc1LTc1eiIgZmlsbD0iI2ZmMCIvPjxwYXRoIGQ9Ik0yNTYgMTUwYzAtNDEuNCAzMy42LTc1IDc1LTc1czc1IDMzLjYgNzUgNzUtMzMuNiA3NS03NSA3NS03NS0zMy42LTc1LTc1eiIgZmlsbD0iI2YwMCIvPjxwYXRoIGQ9Ik0xODEgMTUwYzAtMTguMiA2LjItMzQuOSAxNi4yLTQ4LjFoLTMyLjRjLTkuOSAwLTE4IDguMS0xOCAxOHY2MGMwIDkuOSA4LjEgMTggMTggMThoMzIuNGMtMTAuMS0xMy4yLTE2LjItMjkuOS0xNi4yLTQ3Ljl6IiBmaWxsPSIjZmYwIi8+PHBhdGggZD0iTTMzMSAxMDEuOWgzMi40YzkuOSAwIDE4IDguMSAxOCAxOHY2MGMwIDkuOS04LjEgMTgtMTggMThIMzMxYzEwLjEtMTMuMiAxNi4yLTI5LjkgMTYuMi00OC0uMS0xOC4xLTYuMS0zNC44LTE2LjItNDcuOXoiIGZpbGw9IiNmMDAiLz48L3N2Zz4=');
+}
+
+.secure-icon {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBkPSJNNDY0IDI1NkEyMDggMjA4IDAgMSAwIDQ4IDI1NmEyMDggMjA4IDAgMSAwIDQxNiAwek0wIDI1NkEyNTYgMjU2IDAgMSAxIDUxMiAyNTZhMjU2IDI1NiAwIDEgMSAtNTEyIDB6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTI1NiAxMjhjLTcwLjcgMC0xMjggNTcuMy0xMjggMTI4czU3LjMgMTI4IDEyOCAxMjggMTI4LTU3LjMgMTI4LTEyOC01Ny4zLTEyOC0xMjgtMTI4em0wIDIyNGMtNTMgMC05Ni00My05Ni05NnM0My05NiA5Ni05NiA5NiA0MyA5NiA5Ni00MyA5Ni05NiA5NnoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMjU2IDE5MmMtMTcuNyAwLTMyIDE0LjMtMzIgMzJzMTQuMyAzMiAzMiAzMiAzMi0xNC4zIDMyLTMyLTE0LjMtMzItMzItMzJ6IiBmaWxsPSIjZmZmIi8+PC9zdmc+');
+}

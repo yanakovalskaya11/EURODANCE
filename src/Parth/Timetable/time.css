@@ -1,0 +1,88 @@
+.table_main {
+  padding: 1rem;
+  background: #0a0114;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+th, td {
+  border: 1px solid #7c3aed;
+  padding: 0.75rem;
+  background-color: #1e002d;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+th {
+  background-color: #7c3aed;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Desktop only */
+.desktop-view {
+  display: block;
+}
+.mobile-view {
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .desktop-view {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
+  }
+
+  .day-block {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #1e002d;
+    border-left: 5px solid #7c3aed;
+  }
+
+  .day-block h3 {
+    color: #d200a3;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .lesson-card {
+    background: #2a003f;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    border-left: 3px solid #c084fc;
+  }
+
+  .time {
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  .subject {
+    font-size: 1rem;
+    color: #f9f9f9;
+  }
+
+  .teacher_time {
+    font-style: italic;
+    color: #b0b0b0;
+    font-size: 0.9rem;
+  }
+
+  .no-lessons {
+    font-style: italic;
+    color: #999;
+  }
+}

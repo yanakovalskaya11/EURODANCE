@@ -1,0 +1,254 @@
+/* Основные стили */
+.dance-admin-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Текст с градиентом */
+.gradient-text {
+  background: linear-gradient(90deg, #d200a3, #0061bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(210, 0, 163, 0.3);
+}
+
+/* Элементы с подсветкой */
+.glow-box {
+  background-color: rgba(18, 0, 24, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 30px rgba(210, 0, 163, 0.25);
+  border: 1px solid rgba(210, 0, 163, 0.15);
+}
+
+/* Форма */
+.dance-form {
+  background-color: rgba(18, 0, 24, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 30px rgba(210, 0, 163, 0.25);
+  border: 1px solid rgba(210, 0, 163, 0.15);
+}
+
+/* Заголовки и текст */
+.dance-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Поля ввода */
+.dance-select, 
+.dance-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(210, 0, 163, 0.5);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.dance-select:focus, 
+.dance-input:focus {
+  outline: none;
+  border-color: #d200a3;
+  box-shadow: 0 0 0 3px rgba(210, 0, 163, 0.3);
+}
+
+.time-select {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Кнопки */
+.dance-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+}
+
+.gradient-btn {
+  background: linear-gradient(90deg, #d200a3, #0061bf);
+  color: white;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem auto 0;
+}
+
+.gradient-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(210, 0, 163, 0.4);
+}
+
+.delete-btn {
+  background: rgba(210, 0, 163, 0.1);
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+}
+
+.delete-btn:hover {
+  background: rgba(210, 0, 163, 0.3);
+}
+
+.day-btn {
+  background: rgba(210, 0, 163, 0.1);
+  color: #fff;
+  border: 1px solid rgba(210, 0, 163, 0.3);
+  margin: 0.25rem;
+}
+
+.day-btn.active {
+  background: rgba(210, 0, 163, 0.3);
+  color: #fff;
+  border-color: #d200a3;
+}
+
+/* Таблицы */
+.dance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.dance-table th, 
+.dance-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(210, 0, 163, 0.2);
+}
+
+.dance-table th {
+  background-color: rgba(210, 0, 163, 0.1);
+  color: #fff;
+}
+
+.time-header {
+  background-color: rgba(0, 97, 191, 0.1) !important;
+}
+
+.time-header td {
+  font-weight: bold;
+  color: #4dabf7;
+}
+
+/* Карточки дней */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.day-card {
+  background: rgba(18, 0, 24, 0.7);
+  border: 1px solid rgba(210, 0, 163, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.day-card.active {
+  border-color: #d200a3;
+  box-shadow: 0 0 15px rgba(210, 0, 163, 0.3);
+}
+
+.day-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+.dance-checkbox {
+  transform: scale(1.3);
+  accent-color: #d200a3;
+}
+
+/* Занятые слоты */
+.busy-slots-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.busy-slot {
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+  position: relative;
+}
+
+.current-teacher {
+  background: rgba(210, 0, 163, 0.2);
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+}
+
+.other-teacher {
+  background: rgba(0, 97, 191, 0.2);
+  color: #4dabf7;
+  border: 1px solid #4dabf7;
+}
+
+.busy-teachers-tooltip {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(18, 0, 24, 0.95);
+  border: 1px solid #d200a3;
+  padding: 0.5rem;
+  border-radius: 6px;
+  min-width: 200px;
+  z-index: 10;
+  font-size: 0.8rem;
+}
+
+.busy-slot:hover .busy-teachers-tooltip {
+  display: block;
+}
+
+.no-slots {
+  color: #aaa;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .days-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .day-selector {
+    justify-content: center;
+  }
+  
+  .dance-table {
+    font-size: 0.9rem;
+  }
+}

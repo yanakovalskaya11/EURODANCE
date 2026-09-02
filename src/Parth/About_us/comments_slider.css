@@ -1,0 +1,146 @@
+.testimonials {
+  padding: 60px 20px;
+
+  text-align: center;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+.testimonial-card img{
+    width: 70%;
+    object-fit: cover;
+}
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #D200A3, #FF4F00);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 auto 15px;
+}
+
+.show-all-btn {
+  background: transparent;
+  border: 2px solid #D200A3;
+  color: #D200A3;
+  padding: 12px 30px;
+  border-radius: 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.show-all-btn:hover {
+  background: #D200A3;
+  color: white;
+}
+
+/* about_us.css */
+
+.comments-container {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.comments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.comments {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.comments:hover {
+  transform: translateY(-5px);
+}
+
+
+.stars-container {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 5px;
+}
+
+.file-upload-area_2 {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.file-upload-area_2 textarea {
+  width: 90%;
+  min-height: 100px;
+  padding: 15px;
+  border: 1px solid rgba(210, 0, 163, 0.3);
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  resize: vertical;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.submit-btn_2 {
+  background: linear-gradient(45deg, #D200A3, #FF4F00);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(210, 0, 163, 0.4);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .comments-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .nap {
+    font-size: 24px;
+  }
+}

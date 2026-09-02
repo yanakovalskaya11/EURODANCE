@@ -1,0 +1,203 @@
+/* QuestionsManager.css */
+
+/* Основной контейнер */
+.questions-manager {
+  padding: 24px;
+  background: linear-gradient(to bottom, #111, #070707);
+  min-height: 100vh;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Карточки */
+.ant-card {
+  background-color: rgba(15, 15, 15, 0.9) !important;
+  border: 1px solid #333 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 20px rgba(210, 0, 163, 0.25) !important;
+  margin-bottom: 24px;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid #333 !important;
+  color: #d200a3 !important;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Таблицы */
+.ant-table {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.ant-table-thead > tr > th {
+  background-color: #d200a3 !important;
+  color: white !important;
+  border-bottom: 1px solid #333 !important;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ant-table-tbody > tr > td {
+  border-bottom: 1px solid #333 !important;
+  background-color: rgba(28, 0, 30, 0.7) !important;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background-color: rgba(210, 0, 163, 0.1) !important;
+}
+
+/* Кнопки */
+.ant-btn {
+  font-family: 'Bebas Neue', sans-serif !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  transition: all 0.3s ease !important;
+}
+
+.ant-btn-primary {
+  background-color: #d200a3 !important;
+  border-color: #d200a3 !important;
+}
+
+.ant-btn-primary:hover {
+  background-color: white !important;
+  color: #d200a3 !important;
+  border-color: white !important;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(210, 0, 163, 0.5) !important;
+}
+
+.ant-btn-danger {
+  background-color: #ff0066 !important;
+  border-color: #ff0066 !important;
+}
+
+.ant-btn-danger:hover {
+  background-color: white !important;
+  color: #ff0066 !important;
+  border-color: white !important;
+}
+
+/* Теги */
+.ant-tag {
+  font-family: 'Bebas Neue', sans-serif !important;
+  letter-spacing: 1px !important;
+  border: none !important;
+}
+
+.ant-tag-orange {
+  background-color: rgba(210, 0, 163, 0.2) !important;
+  color: #d200a3 !important;
+}
+
+.ant-tag-red {
+  background-color: rgba(255, 0, 0, 0.2) !important;
+  color: #ff6b6b !important;
+}
+
+.ant-tag-green {
+  background-color: rgba(0, 210, 163, 0.2) !important;
+  color: #00d2a3 !important;
+}
+
+.ant-tag-blue {
+  background-color: rgba(0, 163, 210, 0.2) !important;
+  color: #00a3d2 !important;
+}
+
+/* Модальное окно */
+.ant-modal-content {
+  background-color: rgba(15, 15, 15, 0.95) !important;
+  border: 1px solid #333 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 30px rgba(210, 0, 163, 0.3) !important;
+}
+
+.ant-modal-header {
+  background-color: transparent !important;
+  border-bottom: 1px solid #333 !important;
+  color: #d200a3 !important;
+}
+
+.ant-modal-title {
+  color: #d200a3 !important;
+  font-size: 1.5em !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ant-modal-close-x {
+  color: white !important;
+}
+
+/* Разделитель */
+.ant-divider {
+  border-top: 1px solid #333 !important;
+}
+
+/* Спиннер */
+.ant-spin-dot-item {
+  background-color: #d200a3 !important;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .questions-manager {
+    padding: 15px;
+  }
+  
+  .ant-card {
+    border-radius: 8px !important;
+  }
+  
+  .ant-table {
+    font-size: 0.9em;
+  }
+  
+  .ant-btn {
+    padding: 4px 8px !important;
+    font-size: 0.9em !important;
+  }
+}
+
+/* Кастомные стили для таблицы ответов */
+.answers-table {
+  margin-top: 20px;
+}
+
+.answers-table .ant-table {
+  background-color: rgba(28, 0, 30, 0.5) !important;
+}
+
+.answers-table .ant-table-thead > tr > th {
+  background-color: #00a3d2 !important;
+}
+
+/* Стили для текста */
+h3 {
+  color: #00a3d2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #e0e0e0;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+/* Анимации */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(210, 0, 163, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(210, 0, 163, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(210, 0, 163, 0); }
+}
+
+.loading-pulse {
+  animation: pulse 1.5s infinite;
+}

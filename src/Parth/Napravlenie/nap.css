@@ -1,0 +1,529 @@
+/* Основные стили страницы направления */
+.type {
+    background-color: #000000;
+    padding: 6vh 5vh;
+    min-height: 100vh;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+.type h2 {
+    font-size: 3.5em;
+    color: #d200a3;
+    margin-bottom: 3vh;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px rgba(210, 0, 163, 0.7);
+}
+
+.type_d h2 {
+    font-size: 2em !important;
+    color: #d200a3;
+    margin-bottom: 3vh !important;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.type p {
+    font-size: 1.2em;
+    color: #cccccc;
+    margin: 0 auto 4vh;
+    max-width: 800px;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+/* Стили для видео-контейнера */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 4vh;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(210, 0, 163, 0.5);
+    border: 3px solid #0061bf;
+    background: #000;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.video-container:hover video {
+    transform: scale(1.02);
+}
+
+/* Стили для формы */
+.type form {
+    background-color: #111111;
+    border: 2px solid #0061bf;
+    border-radius: 20px;
+    padding: 4vh 3vh;
+    max-width: 600px;
+    margin: 0 auto 4vh;
+    box-shadow: 0 0 20px rgba(0, 97, 191, 0.5);
+}
+
+.type label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 1vh;
+    color: #d200a3;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.type select {
+    width: 100%;
+    padding: 1.5vh;
+    font-size: 1.1em;
+    border: 2px solid #0061bf;
+    border-radius: 10px;
+    margin-bottom: 2vh;
+    background-color: #222;
+    color: #fff;
+    font-family: sans-serif;
+    transition: all 0.3s ease;
+}
+
+.type select:focus {
+    border-color: #d200a3;
+    box-shadow: 0 0 10px rgba(210, 0, 163, 0.5);
+    outline: none;
+}
+
+.type input[readonly] {
+    width: 90%;
+    padding: 1.5vh;
+    border: 2px dashed #0061bf;
+    background-color: #222;
+    color: #fff;
+    margin-bottom: 2vh;
+    border-radius: 10px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/* Стили для информации о расписании преподавателя */
+.teacher-schedule-info {
+    background-color: rgba(0, 97, 191, 0.1);
+    padding: 2vh;
+    border-radius: 10px;
+    margin: 2vh 0;
+    border-left: 3px solid #d200a3;
+}
+
+.teacher-schedule-info h4 {
+    color: #d200a3;
+    margin-bottom: 1vh;
+    font-size: 1.3em;
+}
+
+.teacher-schedule-info p {
+    margin: 0.5vh 0;
+    font-size: 1em;
+    color: #fff;
+}
+
+.teacher-schedule-info strong {
+    color: #0061bf;
+}
+
+/* Стили для DatePicker */
+.type_d {
+    margin-top: 3vh;
+}
+
+.react-datepicker__input-container input {
+    width: 100%;
+    padding: 1.5vh;
+    font-size: 1.1em;
+    border: 2px solid #0061bf;
+    border-radius: 10px;
+    background-color: #222;
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.react-datepicker__input-container input:focus {
+    border-color: #d200a3;
+    box-shadow: 0 0 10px rgba(210, 0, 163, 0.5);
+    outline: none;
+}
+
+/* Стили для кнопки */
+.type button {
+    background-color: #d200a3;
+    color: #ffffff;
+    border: none;
+    padding: 1.5vh 4vh;
+    font-size: 1.3em;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 3vh;
+    box-shadow: 0 0 15px rgba(210, 0, 163, 0.5);
+}
+
+.type button:hover {
+    background-color: #0061bf;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 97, 191, 0.7);
+}
+
+.type button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Стили для сообщений об ошибках */
+.error {
+    color: #ff4d4d;
+    font-weight: bold;
+    margin: 1vh 0;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+
+/* Стили для модальных окон */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal {
+    background-color: #111;
+    padding: 3vh;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 0 30px rgba(210, 0, 163, 0.7);
+    border: 2px solid #0061bf;
+    text-align: center;
+}
+
+.modal h3 {
+    margin-top: 0;
+    color: #d200a3;
+    font-size: 1.8em;
+    margin-bottom: 2vh;
+}
+
+.modal p {
+    color: #ccc;
+    margin-bottom: 3vh;
+    font-size: 1.1em;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+    flex-wrap: wrap;
+}
+
+.modal-buttons button {
+    padding: 1.5vh 3vh;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 120px;
+}
+
+.modal-buttons button:first-child {
+    background-color: #d200a3;
+    color: white;
+}
+
+.modal-buttons button:first-child:hover {
+    background-color: #b0008a;
+}
+
+.modal-buttons button:last-child {
+    background-color: #0061bf;
+    color: white;
+}
+
+.modal-buttons button:last-child:hover {
+    background-color: #004a99;
+}
+
+/* Стили для платежного модального окна */
+.payment-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+
+.payment-modal {
+    background-color: #111;
+    padding: 4vh;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 0 40px rgba(210, 0, 163, 0.7);
+    border: 2px solid #0061bf;
+}
+
+.payment-modal h3 {
+    color: #d200a3;
+    font-size: 2em;
+    margin-bottom: 1vh;
+    text-align: center;
+}
+
+.payment-amount {
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 3vh;
+    font-weight: bold;
+}
+
+.payment-form {
+    margin-bottom: 3vh;
+}
+
+.form-group {
+    margin-bottom: 2vh;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: #d200a3;
+    margin-bottom: 1vh;
+    font-size: 1.1em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1.5vh;
+    border: 2px solid #0061bf;
+    border-radius: 8px;
+    background-color: #222;
+    color: #fff;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #d200a3;
+    box-shadow: 0 0 10px rgba(210, 0, 163, 0.5);
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 2vh;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.payment-actions {
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+    margin-top: 3vh;
+}
+
+.pay-button {
+    background-color: #d200a3;
+    color: white;
+    padding: 1.5vh 4vh;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+.pay-button:hover {
+    background-color: #b0008a;
+    transform: scale(1.05);
+}
+
+.pay-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.cancel-button {
+    background-color: #333;
+    color: white;
+    padding: 1.5vh 4vh;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+.cancel-button:hover {
+    background-color: #555;
+}
+
+.payment-security {
+    margin-top: 3vh;
+    text-align: center;
+}
+
+.payment-security p {
+    color: #ccc;
+    margin-bottom: 1vh;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+    margin-top: 1vh;
+}
+
+.payment-icons span {
+    padding: 0.5vh 1.5vh;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.visa-icon {
+    background-color: #1a1f71;
+    color: white;
+}
+
+.mastercard-icon {
+    background-color: #eb001b;
+    color: white;
+}
+
+.secure-icon {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .type {
+        padding: 4vh 3vh;
+    }
+    
+    .type h2 {
+        font-size: 2.5em;
+    }
+    
+    .type form {
+        padding: 3vh 2vh;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 1vh;
+    }
+    
+    .modal-buttons {
+        flex-direction: column;
+        gap: 1vh;
+    }
+    
+    .modal-buttons button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .type {
+        padding: 3vh 2vh;
+    }
+    
+    .type h2 {
+        font-size: 2em;
+    }
+    
+    .type button {
+        padding: 1.5vh 3vh;
+        font-size: 1.1em;
+    }
+    
+    .payment-modal {
+        padding: 3vh 2vh;
+    }
+}
+
+/* Кастомные стили для DatePicker */
+.dark-theme-datepicker {
+    background-color: #222;
+    color: white;
+}
+
+.dark-theme-calendar {
+    background-color: #222;
+    border: 2px solid #0061bf;
+    box-shadow: 0 0 20px rgba(0, 97, 191, 0.5);
+}
+
+.dark-theme-calendar .react-datepicker__header {
+    background-color: #111;
+    border-bottom: 1px solid #0061bf;
+}
+
+.dark-theme-calendar .react-datepicker__current-month,
+.dark-theme-calendar .react-datepicker__day-name {
+    color: white;
+}
+
+.dark-theme-calendar .react-datepicker__day {
+    color: white;
+}
+
+.dark-theme-calendar .react-datepicker__day--selected {
+    background-color: #d200a3;
+    color: white;
+}
+
+.dark-theme-calendar .react-datepicker__day--disabled {
+    color: #555;
+}
+
+.disabled-day {
+    color: #ff4d4d !important;
+    text-decoration: line-through;
+    background-color: rgba(255, 77, 77, 0.1) !important;
+}
+
+.type_d button{
+  padding: 0 !important;
+}

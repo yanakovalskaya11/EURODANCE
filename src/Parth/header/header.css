@@ -1,0 +1,371 @@
+/* Основные стили */
+.dance-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(18, 0, 24, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 4px 30px rgba(210, 0, 163, 0.3);
+  border-bottom: 1px solid rgba(210, 0, 163, 0.2);
+  transition: all 0.3s ease;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Логотип и название */
+.logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+  /* border-radius: 50%; */
+  object-fit: cover;
+  /* border: 2px solid #d200a3; */
+  /* box-shadow: 0 0 15px rgba(210, 0, 163, 0.5); */
+  transition: all 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: rotate(10deg) scale(1.1);
+
+}
+
+.studio-name {
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+  background: linear-gradient(90deg, #d200a3, #0061bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(210, 0, 163, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Навигация для ПК */
+.desktop-nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 0.5rem 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.link-text {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.link-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #d200a3, #0061bf);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover .link-text {
+  color: #d200a3;
+  text-shadow: 0 0 10px rgba(210, 0, 163, 0.5);
+}
+
+.nav-link:hover .link-hover {
+  transform: translateX(0);
+}
+
+/* Стили для профиля пользователя */
+.user-profile {
+  position: relative;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.username {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.profile-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(210, 0, 163, 0.3), rgba(0, 97, 191, 0.3));
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.user-profile:hover {
+  transform: translateY(-2px);
+}
+
+.user-profile:hover .profile-glow {
+  opacity: 1;
+}
+
+.user-profile:hover .username {
+  color: #d200a3;
+  text-shadow: 0 0 10px rgba(210, 0, 163, 0.5);
+}
+
+/* Мобильное меню */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background: #d200a3;
+}
+
+.mobile-menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background: #d200a3;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: #120018;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: right 0.3s ease;
+  padding: 5rem 1rem 1rem;
+  border-left: 1px solid #d200a3;
+}
+
+.mobile-nav.open {
+  right: 0;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav-item {
+  margin-bottom: 1.5rem;
+}
+
+.mobile-nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  display: block;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+  background-color: rgba(210, 0, 163, 0.2);
+  color: #d200a3;
+  padding-left: 1.5rem;
+}
+
+.mobile-user-profile {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  display: block;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-user-profile:hover {
+  background-color: rgba(210, 0, 163, 0.2);
+  color: #d200a3;
+  padding-left: 1.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .studio-name {
+    font-size: 1.5rem;
+  }
+
+  .logo-image {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Анимации */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(210, 0, 163, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(210, 0, 163, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(210, 0, 163, 0); }
+}
+
+/* Эффект для активного пользователя */
+.user-profile.active {
+  animation: pulse 2s infinite;
+}
+
+/* Стили для выпадающего меню (десктоп) */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.dropdown-arrow {
+  margin-left: 5px;
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(18, 0, 24, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(210, 0, 163, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(210, 0, 163, 0.2);
+  padding: 0.5rem 0;
+  min-width: 200px;
+  z-index: 100;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(210, 0, 163, 0.2);
+  color: #d200a3;
+  padding-left: 1.5rem;
+}
+
+/* Стили для мобильного выпадающего меню */
+.mobile-dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-dropdown-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.mobile-dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+  background-color: rgba(210, 0, 163, 0.1);
+  border-left: 2px solid #d200a3;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.mobile-dropdown-item {
+  display: block;
+  padding: 0.5rem 0;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.mobile-dropdown-item:hover {
+  color: #d200a3;
+  padding-left: 0.5rem;
+}

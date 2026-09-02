@@ -1,0 +1,279 @@
+/* Общие стили для обоих слайдеров */
+.slider-container, .slider-container_t {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem 1rem;
+  overflow: hidden; /* Это исправит проблему с горизонтальной полосой прокрутки */
+}
+
+.nap {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(210, 0, 163, 0.3);
+}
+
+/* Стили для слайдера преподавателей */
+.slider_t {
+  position: relative;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.slide_t {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-content_t {
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teacher-name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-shadow: 0 0 15px rgba(210, 0, 163, 0.7);
+}
+
+.teacher-directions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.direction-tag {
+  background: rgba(210, 0, 163, 0.2);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid var(--primary-color);
+}
+
+.teacher-photo {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 0 30px rgba(210, 0, 163, 0.7);
+  margin-bottom: 1.5rem;
+}
+
+.rating-container_t {
+  margin-top: 1rem;
+}
+
+.stars-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars {
+  font-size: 1.8rem;
+  color: gold;
+  letter-spacing: 2px;
+}
+
+.rating-info {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.rating-value {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.rating-separator, .rating-max {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.ratings-count {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+/* Кнопки навигации */
+.prev-button, .next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(18, 0, 24, 0.8);
+  color: white;
+  border: 2px solid var(--primary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(210, 0, 163, 0.4);
+  outline: none;
+}
+
+.prev-button:hover, .next-button:hover {
+  background: var(--primary-color);
+  box-shadow: 0 0 30px rgba(210, 0, 163, 0.9);
+}
+
+.prev-button {
+  left: 30px;
+}
+
+.next-button {
+  right: 30px;
+}
+
+/* Индикаторы слайдов */
+.slide-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background-color: var(--primary-color);
+  transform: scale(1.3);
+  box-shadow: 0 0 15px rgba(210, 0, 163, 0.9);
+}
+
+/* Состояния загрузки */
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(210, 0, 163, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s ease-in-out infinite;
+  margin: 2rem auto;
+}
+
+.no-teachers {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  padding: 2rem;
+  background: rgba(210, 0, 163, 0.1);
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 500px;
+  border: 1px dashed var(--primary-color);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+  .slider_t {
+    height: 550px;
+  }
+  
+  .teacher-name {
+    font-size: 2rem;
+  }
+  
+  .teacher-photo {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider_t {
+    height: 500px;
+  }
+  
+  .nap {
+    font-size: 2.5rem;
+  }
+  
+  .teacher-name {
+    font-size: 1.8rem;
+  }
+  
+  .prev-button, .next-button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider_t {
+    height: 450px;
+  }
+  
+  .nap {
+    font-size: 2rem;
+  }
+  
+  .teacher-name {
+    font-size: 1.5rem;
+  }
+  
+  .teacher-photo {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .prev-button, .next-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .indicator {
+    width: 12px;
+    height: 12px;
+  }
+}
