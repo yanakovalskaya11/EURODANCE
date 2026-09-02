@@ -1,0 +1,115 @@
+/* Основные стили */
+.naprav_ {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(18, 0, 24, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(210, 0, 163, 0.2);
+    border: 1px solid rgba(210, 0, 163, 0.3);
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
+}
+
+.nap {
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 10px #d200a3, 0 0 20px #0061bf;
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+.nap::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, #d200a3 0%, #0061bf 100%);
+}
+
+.teachers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.teachers > div {
+    background-color: rgba(18, 0, 24, 0.6);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(210, 0, 163, 0.2);
+    box-shadow: 0 0 15px rgba(210, 0, 163, 0.1);
+}
+
+.teachers > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(210, 0, 163, 0.3);
+    border-color: rgba(210, 0, 163, 0.5);
+}
+
+.teacher {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #d200a3;
+    box-shadow: 0 0 20px rgba(210, 0, 163, 0.3);
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.teacher:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(210, 0, 163, 0.5);
+}
+
+.teacher-name {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0.5rem 0;
+    text-shadow: 0 0 5px #d200a3;
+}
+
+.subjects {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 0.5rem 0;
+}
+
+.subjects strong {
+    color: #d200a3;
+    text-shadow: 0 0 5px rgba(210, 0, 163, 0.5);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .teachers {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .nap {
+        font-size: 2.2rem;
+    }
+    
+    .teacher {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .teachers {
+        grid-template-columns: 1fr;
+    }
+    
+    .naprav_ {
+        padding: 1rem;
+    }
+}

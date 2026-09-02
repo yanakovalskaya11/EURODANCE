@@ -1,0 +1,381 @@
+/* Общие стили */
+.videos-feed {
+  max-width: 800px;
+  margin: 100px auto 50px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.direction-select {
+  background: rgba(18, 0, 24, 0.85);
+  border: 1px solid rgba(210, 0, 163, 0.5);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.direction-select:hover {
+  border-color: rgba(210, 0, 163, 0.8);
+  box-shadow: 0 0 10px rgba(210, 0, 163, 0.3);
+}
+
+.direction-select:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(210, 0, 163, 0.5);
+}
+
+/* Стили поста с видео */
+.video-post {
+  background-color: rgba(18, 0, 24, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(210, 0, 163, 0.25);
+  border: 1px solid rgba(210, 0, 163, 0.15);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.video-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 40px rgba(210, 0, 163, 0.4);
+}
+
+/* Шапка поста */
+.post-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(210, 0, 163, 0.2);
+}
+
+.teacher-info-vid {
+  display: flex;
+  align-items: center;
+  background-color: #120018;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  border: 2px solid #0061bf;
+  box-shadow: 0 0 15px rgba(0, 97, 191, 0.3);
+}
+
+.teacher-name-container {
+  flex: 1;
+}
+
+.teacher-name {
+  margin: 0;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #d200a3, #0061bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(210, 0, 163, 0.3);
+}
+
+.teacher-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #d200a3;
+  box-shadow: 0 0 20px rgba(210, 0, 163, 0.5);
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.teacher-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(210, 0, 163, 0.8);
+}
+
+.teacher-directions {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.specialty-tag {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #b8b8b8;
+  padding: 3px 8px;
+  border-radius: 15px;
+  background: rgba(210, 0, 163, 0.1);
+  border: 1px solid rgba(210, 0, 163, 0.3);
+  transition: all 0.3s ease;
+}
+
+.specialty-tag:hover {
+  background: rgba(210, 0, 163, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Меню управления */
+/* Меню управления */
+.menu-container {
+  position: relative;
+  margin-left: 15px;
+  cursor: pointer;
+  z-index: 10; /* Добавляем z-index */
+}
+
+.menu-icon {
+  font-size: 18px;
+  color: #666;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menu-icon:hover {
+  color: #d200a3;
+  background: rgba(210, 0, 163, 0.1);
+  transform: rotate(90deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: rgba(18, 0, 24, 0.95);
+  border: 1px solid rgba(210, 0, 163, 0.5);
+  border-radius: 8px;
+  padding: 5px 0;
+  min-width: 180px; /* Увеличиваем минимальную ширину */
+  z-index: 1000; /* Увеличиваем z-index */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: visible; /* Разрешаем overflow */
+}
+
+.dropdown-menu button {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  color: #fff;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+.dropdown-menu button:hover {
+  background: rgba(210, 0, 163, 0.3);
+  color: #fff;
+}
+
+.dropdown-menu button i {
+  margin-right: 10px;
+  font-style: normal;
+}
+
+/* Для видео-поста */
+.video-post {
+  position: relative; /* Добавляем relative */
+  overflow: visible; /* Разрешаем overflow */
+  z-index: 1;
+}
+
+.post-header {
+  position: relative; /* Добавляем relative */
+  z-index: 1;
+}
+
+
+/* Контейнер видео */
+.video-container {
+  width: 90%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-player {
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.video-player:hover {
+  box-shadow: 0 0 30px rgba(210, 0, 163, 0.8);
+}
+
+/* Форма загрузки видео */
+.video-upload-container {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-upload-label {
+  display: inline-block;
+  padding: 8px 15px;
+  background: rgba(210, 0, 163, 0.2);
+  color: #d200a3;
+  border: 1px dashed rgba(210, 0, 163, 0.5);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.video-upload-label:hover {
+  background: rgba(210, 0, 163, 0.3);
+  color: #fff;
+}
+
+.video-upload-input {
+  display: none;
+}
+
+.video-file-name {
+  color: #b8b8b8;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+/* Описание поста */
+.post-description {
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.edit-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(210, 0, 163, 0.5);
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 1rem;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.edit-textarea:focus {
+  outline: none;
+  border-color: rgba(210, 0, 163, 0.8);
+  box-shadow: 0 0 10px rgba(210, 0, 163, 0.3);
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.save-btn {
+  background: rgba(0, 97, 191, 0.3);
+  color: #0061bf;
+  border: 1px solid rgba(0, 97, 191, 0.5);
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+  background: rgba(0, 97, 191, 0.5);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.cancel-btn {
+  background: rgba(255, 0, 0, 0.2);
+  color: #ff4444;
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: rgba(255, 0, 0, 0.4);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .videos-feed {
+    margin-top: 80px;
+    padding: 0 15px;
+  }
+  
+  .teacher-name {
+    font-size: 1.5rem;
+  }
+  
+  .video-player {
+    max-height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .menu-container {
+    margin-left: 0;
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+  
+  .teacher-name {
+    font-size: 1.3rem;
+  }
+  
+  .edit-buttons {
+    flex-direction: column;
+  }
+  
+  .save-btn, .cancel-btn {
+    width: 100%;
+  }
+}
